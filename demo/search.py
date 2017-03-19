@@ -31,8 +31,8 @@ if __name__ == '__main__':
 
     print('\r--- questions with "%s" in title ---' % (term))
     
-    l1 = sorted(qs, key=lambda question: question.answer_count, reverse=True)
-    l2 = sorted(l1, key=lambda question: question.is_answered, reverse=True)
+    l1 = sorted(qs, key=lambda question: question.answer_count, reverse=False)
+    l2 = sorted(l1, key=lambda question: question.is_answered, reverse=False)
     for q in l2:
         #print ('%s' % (q.__dict__))
         print('Num answer: %d, Answer: %s' % (q.answer_count, q.is_answered))
