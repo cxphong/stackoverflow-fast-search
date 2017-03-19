@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from __future__ import print_function
+from termcolor import colored
 
 # a hack so you can run it 'python demo/search.py'
 import sys
@@ -22,6 +23,7 @@ if __name__ == '__main__':
     #an = Question()
     #dir(an)
 
+
     term = get_input('Please provide a search term:')
     print('Searching for %s...' % term,)
     sys.stdout.flush()
@@ -36,7 +38,7 @@ if __name__ == '__main__':
     for q in l2:
         #print ('%s' % (q.__dict__))
         print('Num answer: %d, Answer: %s' % (q.answer_count, q.is_answered))
-        print('%s' % q.title)
+        print(colored('%s' % q.title, 'green'))
         print('%s' % (q.url))
         print('---------------------------------------------------------')
 
